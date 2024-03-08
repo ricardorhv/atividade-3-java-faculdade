@@ -23,14 +23,30 @@ public class App {
         System.out.println(relacionamento1.toString());
     }
 
+    public static void executarAtividade3() {
+        No no1 = new No("7f9c2d1a-4e3b-4598-baee-3a1c2f9e4d6f");
+        No no2 = new No("5a8d7f2b-9c4e-3b1f-ae2c-1f8a7d6c9b0d");
+        No no3 = new No("d3e1b6f9-8c2a-4f7d-b5e6-0a1c9e8d7f2a");
+
+        no1.addNoToConnection(no2);
+        no1.addNoToConnection(no3);
+        no1.showConnection();
+
+        no2.showConnection();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
 
         System.out.println("1 - Atividade 1");
         System.out.println("2 - Atividade 2");
-        System.out.println("1 - Atividade 1");
-        System.out.println("1 - Atividade 1");
+        System.out.println("3 - Atividade 3");
+        System.out.println("4 - Atividade 4");
+        System.out.println("5 - Atividade 5");
+        System.out.println("6 - Atividade 6");
+        System.out.println("7 - Atividade 7");
+        System.out.println("8 - Atividade 8");
         System.out.print("Escolha qual atividade gostaria de visualizar: ");
         escolha = sc.nextInt();
 
@@ -42,7 +58,7 @@ public class App {
                 executarAtividade2();
                 break;
             case 3:
-                executarAtividade1();
+                executarAtividade3();
                 break;
             case 4:
                 executarAtividade1();
