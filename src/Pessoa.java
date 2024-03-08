@@ -4,6 +4,7 @@ public class Pessoa {
   private String name;
   private ArrayList<Pessoa> friends;
   private Relacionamento relationship;
+  private Propriedade property;
 
   public Pessoa(String name) {
     this.name = name;
@@ -29,6 +30,14 @@ public class Pessoa {
 
   public void setRelationship(Relacionamento relationship) {
     this.relationship = relationship;
+  }
+
+  public Propriedade getProperty() {
+    return property;
+  }
+
+  public void setProperty(Propriedade property) {
+    this.property = property;
   }
 
   @Override

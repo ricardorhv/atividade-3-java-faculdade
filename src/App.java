@@ -35,6 +35,30 @@ public class App {
         no2.showConnection();
     }
 
+    public static void executarAtividade4() {
+        PessoaFilho pessoa1 = new PessoaFilho("Ricardo");
+        PessoaFilho pessoa2 = new PessoaFilho("Maite");
+
+        pessoa1.addChild(pessoa2);
+
+        pessoa1.showChildren();
+        pessoa2.showChildren();
+
+    }
+
+    public static void executarAtividade5() {
+        Pessoa pessoa1 = new Pessoa("Ricardo");
+        Pessoa pessoa2 = new Pessoa("Joao");
+        Pessoa pessoa3 = new Pessoa("Guilherme");
+
+        Propriedade propriedade = new Propriedade("Casa");
+        propriedade.define(pessoa1, pessoa2);
+        propriedade.verifyRelationshipBetweenPeople(pessoa2, pessoa3);
+        propriedade.verifyRelationshipBetweenPeople(pessoa1, pessoa2);
+
+        pessoa1.getProperty().show();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -61,8 +85,17 @@ public class App {
                 executarAtividade3();
                 break;
             case 4:
-                executarAtividade1();
+                executarAtividade4();
                 break;
+            case 5:
+                executarAtividade5();
+                break;
+            // case 6:
+            // executarAtividade6();
+            // break;
+            // case 7:
+            // executarAtividade7();
+            // break;
 
             default:
                 break;
