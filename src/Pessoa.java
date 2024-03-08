@@ -5,6 +5,7 @@ public class Pessoa {
   private ArrayList<Pessoa> friends;
   private Relacionamento relationship;
   private Propriedade property;
+  private Evento event;
 
   public Pessoa(String name) {
     this.name = name;
@@ -38,6 +39,14 @@ public class Pessoa {
 
   public void setProperty(Propriedade property) {
     this.property = property;
+  }
+
+  public Evento getEvent() {
+    return event;
+  }
+
+  public void setEvent(Evento event) {
+    this.event = event;
   }
 
   @Override

@@ -59,6 +59,25 @@ public class App {
         pessoa1.getProperty().show();
     }
 
+    public static void executarAtividade6() {
+        Pessoa participante1 = new Pessoa("Ricardo");
+        Pessoa participante2 = new Pessoa("Júlia");
+        Pessoa participante3 = new Pessoa("Guilherme");
+        Pessoa participante4 = new Pessoa("Ana");
+        Pessoa participante5 = new Pessoa("Luan");
+
+        Evento festa = new Evento("Festa");
+        festa.addParticipant(participante1);
+        festa.addParticipant(participante2);
+        festa.addParticipant(participante3);
+        festa.addParticipant(participante4);
+        festa.addParticipant(participante5);
+
+        festa.removeParticipant(participante5);
+
+        festa.showParticipants();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -90,9 +109,9 @@ public class App {
             case 5:
                 executarAtividade5();
                 break;
-            // case 6:
-            // executarAtividade6();
-            // break;
+            case 6:
+                executarAtividade6();
+                break;
             // case 7:
             // executarAtividade7();
             // break;

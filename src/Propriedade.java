@@ -25,4 +25,28 @@ class Propriedade {
     System.out.println(this.owner.getName() + " possui a propriedade da pessoa " + this.oldOwner.getName());
   }
 
+  public Pessoa getOwner() {
+    return owner;
+  }
+
+  public void setOwner(Pessoa owner) {
+    this.owner = owner;
+  }
+
+  public Pessoa getOldOwner() {
+    return oldOwner;
+  }
+
+  public void setOldOwner(Pessoa oldOwner) {
+    this.oldOwner = oldOwner;
+  }
+
+  public String getPropertyname() {
+    return propertyname;
+  }
+
+  public void setPropertyname(String propertyname) {
+    this.propertyname = propertyname;
+  }
+
 }
