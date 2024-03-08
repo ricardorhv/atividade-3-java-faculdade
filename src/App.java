@@ -78,6 +78,44 @@ public class App {
         festa.showParticipants();
     }
 
+    public static void executarAtividade7() {
+        Pessoa pessoa1 = new Pessoa("Ricardo");
+        Pessoa pessoa2 = new Pessoa("Júlia");
+        Pessoa pessoa3 = new Pessoa("Guilherme");
+        Pessoa pessoa4 = new Pessoa("Henrique");
+        Pessoa pessoa5 = new Pessoa("João");
+        Pessoa pessoa6 = new Pessoa("Maria");
+
+        RedeSocial redeSocial = new RedeSocial("Instagram");
+
+        pessoa1.createAccountInSocialNetwork(redeSocial);
+        pessoa2.createAccountInSocialNetwork(redeSocial);
+        pessoa3.createAccountInSocialNetwork(redeSocial);
+        pessoa4.createAccountInSocialNetwork(redeSocial);
+        pessoa5.createAccountInSocialNetwork(redeSocial);
+        pessoa6.createAccountInSocialNetwork(redeSocial);
+
+        pessoa1.addFriendInSocialNetwork(pessoa2);
+        pessoa1.addFriendInSocialNetwork(pessoa4);
+        pessoa1.addFriendInSocialNetwork(pessoa5);
+        pessoa1.addFriendInSocialNetwork(pessoa6);
+
+        pessoa2.addFriendInSocialNetwork(pessoa3);
+
+        pessoa4.addFriendInSocialNetwork(pessoa2);
+
+        pessoa1.showMyFriendsInSocialNetwork();
+        pessoa4.showMyFriendsInSocialNetwork();
+
+        pessoa4.removeFriendInSocialNetwork(pessoa1);
+        pessoa4.removeFriendInSocialNetwork(pessoa6);
+
+        pessoa4.showMyFriendsInSocialNetwork();
+        pessoa1.showMyFriendsInSocialNetwork();
+
+        redeSocial.showUsers();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -112,9 +150,9 @@ public class App {
             case 6:
                 executarAtividade6();
                 break;
-            // case 7:
-            // executarAtividade7();
-            // break;
+            case 7:
+                executarAtividade7();
+                break;
 
             default:
                 break;
