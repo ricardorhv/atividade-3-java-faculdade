@@ -116,6 +116,24 @@ public class App {
         redeSocial.showUsers();
     }
 
+    public static void executarAtividade8() {
+        Pessoa pessoa1 = new Pessoa("Ricardo");
+        Pessoa pessoa2 = new Pessoa("Guilherme");
+        Pessoa pessoa3 = new Pessoa("Rafael");
+        Pessoa pessoa4 = new Pessoa("Henrique");
+
+        Conexao conexao = new Conexao("Programeiros");
+        conexao.addConnection(pessoa1);
+        conexao.addConnection(pessoa2);
+        conexao.addConnection(pessoa2);
+        conexao.addConnection(pessoa3);
+        conexao.addConnection(pessoa4);
+
+        conexao.removeConnection(pessoa4);
+
+        conexao.showFriendsConnection();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -128,6 +146,8 @@ public class App {
         System.out.println("6 - Atividade 6");
         System.out.println("7 - Atividade 7");
         System.out.println("8 - Atividade 8");
+        System.out.println("9 - Atividade 9");
+        System.out.println("10 - Atividade 10");
         System.out.print("Escolha qual atividade gostaria de visualizar: ");
         escolha = sc.nextInt();
 
@@ -151,6 +171,15 @@ public class App {
                 executarAtividade6();
                 break;
             case 7:
+                executarAtividade7();
+                break;
+            case 8:
+                executarAtividade8();
+                break;
+            case 9:
+                executarAtividade7();
+                break;
+            case 10:
                 executarAtividade7();
                 break;
 

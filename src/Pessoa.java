@@ -7,6 +7,8 @@ public class Pessoa {
   private Propriedade property;
   private Evento event;
 
+  private ArrayList<Conexao> connections;
+
   private RedeSocial socialNetwork;
   private ArrayList<Pessoa> socialNetworkFriends;
 
@@ -14,6 +16,23 @@ public class Pessoa {
     this.name = name;
     this.friends = new ArrayList<Pessoa>();
     this.socialNetworkFriends = new ArrayList<Pessoa>();
+    this.connections = new ArrayList<Conexao>();
+  }
+
+  public ArrayList<Pessoa> getFriends() {
+    return friends;
+  }
+
+  public void setFriends(ArrayList<Pessoa> friends) {
+    this.friends = friends;
+  }
+
+  public ArrayList<Conexao> getConnections() {
+    return connections;
+  }
+
+  public void setConnections(ArrayList<Conexao> connections) {
+    this.connections = connections;
   }
 
   public String getName() {
