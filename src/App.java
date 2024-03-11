@@ -134,6 +134,19 @@ public class App {
         conexao.showFriendsConnection();
     }
 
+    public static void executarAtividade9() {
+        Pessoa pessoa1 = new Pessoa("Ricardo");
+        Compra compra = new Compra(pessoa1);
+
+        compra.addProduct("Arroz");
+        compra.addProduct("Feijão");
+        compra.addProduct("Chocolate");
+
+        compra.removeProduct("Arroz");
+
+        compra.showProductListInfo();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -177,7 +190,7 @@ public class App {
                 executarAtividade8();
                 break;
             case 9:
-                executarAtividade7();
+                executarAtividade9();
                 break;
             case 10:
                 executarAtividade7();
