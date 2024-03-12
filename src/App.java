@@ -147,6 +147,18 @@ public class App {
         compra.showProductListInfo();
     }
 
+    public static void executarAtividade10() {
+        Pessoa pessoa1 = new Pessoa("Ricardo");
+        ContaBancaria contaBancaria = new ContaBancaria(pessoa1);
+
+        contaBancaria.deposit(1000);
+        contaBancaria.withdraw(500);
+        contaBancaria.withdraw(600);
+        contaBancaria.deposit(200);
+
+        contaBancaria.showBalance();
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -193,7 +205,7 @@ public class App {
                 executarAtividade9();
                 break;
             case 10:
-                executarAtividade7();
+                executarAtividade10();
                 break;
 
             default:
